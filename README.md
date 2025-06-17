@@ -1,12 +1,45 @@
-# React + Vite
+# 🏋️‍♂️ EliteFit Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the **frontend** for the **EliteFit** web application — a gym slot booking and supplement shopping platform. Built using modern React tooling and hosted on **Vercel**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Site
 
-## Expanding the ESLint configuration
+👉 [https://elitefit.vercel.app](https://elitefit.vercel.app)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ⚙️ Core Tech Stack
+
+### 🧠 React Ecosystem
+- **React 19** – Modern UI framework
+- **React Router v7** – Route management
+- **@tanstack/react-query v5** – Server state management, caching, pagination, etc.
+- **React Hot Toast** – Lightweight toast notifications
+- **React Infinite Scroll Component** – Infinite scrolling for product lists
+
+### 🔐 Forms & Validation
+- **Formik** – Form handling
+- **Yup** – Schema-based validation
+
+### ⚡ UI & Styling
+- **Ant Design v5** – Component library (e.g., modals, tables, inputs)
+- **Lucide React** – Icon set
+- **Tailwind CSS** – Utility-first CSS framework
+
+### 🎯 UX & UI Enhancers
+- **Swiper.js** – Carousels & sliders for banners or products
+- **React Rating Stars Component** – Customizable rating stars
+- **React Stars** – Alternative rating input
+- **React Spinners** – Beautiful loading indicators
+- **React Icons** – Additional icon options
+- **use-debounce** – Debounced search input UX
+
+
+---
+
+## 🌍 Backend Integration
+
+- Backend hosted on **Render**  
+
