@@ -198,7 +198,7 @@ function Home() {
         <div className="absolute inset-0 bg-black/30 z-1"></div>
         <h1 className='absolute w-full top-0 text-3xl text-eliteGold font-extrabold mt-24   text-center'>Memberships</h1>
         <div className='w-[162px] h-[2px] bg-white absolute top-33 left-[670px]'></div>
-        <div className='h-full w-[95%] md:w-[93%] mx-auto flex flex-nowrap justify-center items-center gap-3 overflow-x-auto scrollbar-hidden md:overflow-hidden scroll-smooth relative'>
+        <div className='h-full w-[95%] md:w-[93%] mx-auto flex flex-nowrap justify-start items-center gap-3 overflow-x-auto scrollbar-hidden md:overflow-hidden scroll-smooth relative'>
        
         
           {memberships.map((item, idx) => (
