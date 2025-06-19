@@ -34,7 +34,7 @@ function ProfileConsultancy() {
           ))
 
         ):(
-          <div className="text-gray-500 mt-100 mx-auto">No memberships found.</div>
+          <div className="text-gray-500 mt-100 mx-auto">No upcoming Consultancy found.</div>
         )
       }
 

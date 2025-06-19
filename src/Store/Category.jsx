@@ -260,7 +260,7 @@ export function ProductCards({product}){
   const navigate = useNavigate();
   const {name,rating,price,discount,description,image,available} = product
   return(
-    <div  className={`h-[325px]  bg-white shadow-2xl cursor-pointer px-[30px] box-border overflow-hidden relative
+    <div  className={`h-[325px]  bg-white shadow-2xl cursor-pointer px-[30px] box-border overflow-hidden relative md:ml-0 ml-5
       ${location.pathname === "/admin/products" ? "w-[250px]" : "w-[260px]"}`}
     onClick={()=>{
       if(location.pathname === "/admin/products"){
