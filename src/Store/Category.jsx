@@ -260,7 +260,7 @@ export function ProductCards({product}){
   const navigate = useNavigate();
   const {name,rating,price,discount,description,image,available} = product
   return(
-    <div  className={`h-[325px]  bg-white shadow-2xl cursor-pointer px-[30px] box-border overflow-hidden relative md:ml-0 ml-5
+    <div  className={`md:h-[325px] h-[330px] bg-white shadow-2xl cursor-pointer px-[30px] box-border overflow-hidden relative md:ml-0 ml-5
       ${location.pathname === "/admin/products" ? "w-[250px]" : "w-[260px]"}`}
     onClick={()=>{
       if(location.pathname === "/admin/products"){
@@ -271,11 +271,11 @@ export function ProductCards({product}){
       
     }}>
     <div className='flex flex-col justify-center relative'>
-      <img src={image} className='h-[180px] w-[200px] object-contain mt-5' 
+      <img src={image} className='h-[180px] w-[200px] object-contain mt-5 mb-2' 
         alt='Product'/>
      
     </div>
-    <span className='absolute bottom-26 right-0 flex  px-2 bg-[#1f293792] text-white'>
+    <span className='absolute bottom-24 right-0 flex  px-2 bg-[#1f293792] text-white'>
       {rating}<IoStar className='mt-1 ml-1 text-eliteGold'/></span>
     <h1 className='mt-6 truncate text-eliteGray font-bold'>{name}</h1>
     <p className='text-gray-600 text-xs truncate'>{description}</p>
