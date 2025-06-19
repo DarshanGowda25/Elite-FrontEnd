@@ -122,8 +122,8 @@ export default function Category() {
 
     <div  className='max-w-screen h-screen lg:max-w-[1800px] overflow-x-hidden overflow-y-auto scrollbar-hidden  scroll-smooth flex '>
 
-      <span className={` fixed top-40 left-6 flex z-5 ${openMobileFilter?"hidden":"flex md:hidden"} `}
-      >Filter <FaFilter className='mt-[6px] ml-2   text-eliteGray'
+      <span className={` fixed top-40 left-6 flex z-5 text-white ${openMobileFilter?"hidden":"flex md:hidden"} `}
+      >Filter <FaFilter className='mt-[6px] ml-2   md:text-eliteGray text-white'
       onClick={() => setMobileFilter(true)}
       /></span>
 
@@ -212,7 +212,7 @@ export default function Category() {
 
 
       {/* //display products */}
-      <section id="scrollableDiv" className='relative  w-full h-full pl-10 md:pl-[310px] pt-[150px] md:pt-[70px] overflow-y-scroll scrollbar-hidden'>
+      <section id="scrollableDiv" className='relative  w-full h-full pl-10 md:pl-[310px] pt-[150px] md:pt-[70px] overflow-y-scroll scrollbar-hidden bg-eliteGray md:bg-white'>
         {productDataLoading && <ContentLoader/>}
         {productContent?.length === 0 ? (<Error />) 
         : (
