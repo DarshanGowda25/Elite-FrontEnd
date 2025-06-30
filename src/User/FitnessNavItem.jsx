@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 function FitnessNavItem() {
   return (
-    <section className='h-[50px] w-full bg-eliteBlack fixed top-[80px] z-50 flex justify-evenly items-center text-white'>
+    <section className='h-[50px] w-full bg-eliteBlack fixed top-[80px] z-49 flex justify-evenly items-center text-white'>
         {/* //Without end, /fitness/elitePro would also match the /fitness route */}
         {/* The end prop makes sure the "Elite" link is only active when the path is exactly /fitness */}
         <NavLink to='' end className={({isActive})=>`${isActive ? 'text-eliteGold' : 'text-white'}`}>Elite</NavLink>

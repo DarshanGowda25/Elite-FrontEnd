@@ -41,7 +41,7 @@ function StoreNavItems() {
 
   const[openCategory,setOpenCategory] = useState(false);
   return (
-    <section className='fixed h-[70px] top-[80px] md:top-0 left-0 z-50 w-full m-0 '>
+    <section className='fixed h-[70px] top-[80px] md:top-0 left-0 z-49 w-full m-0 '>
       <nav className='h-full w-full bg-gray-200 flex flex-row items-center justify-items-start gap-6 md:gap-70 relative '>
 
         <ul className='h-[40px] bg-eliteGray text-white font-bold place-content-center px-4 ml-2 md:ml-5 rounded-sm shadow-[0px_0px_6px_black]

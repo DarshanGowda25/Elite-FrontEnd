@@ -85,7 +85,7 @@ function NavBar() {
      ${location.pathname === '/store' || location.pathname === '/fitness' ? "top-30":"top-20"}  
     `} >
         {navItems.map((item,idx)=>(
-                <NavLink key={idx} to={item.link} className={({ isActive }) => `${navLinkClass} ${isActive ? activeClass : ''} h-[50px] md:h-auto w-[40%] `}
+                <NavLink key={idx} to={item.link} className={({ isActive }) => `${navLinkClass} ${isActive ? activeClass : ''} h-[50px] md:h-auto w-[40%]`}
                 onClick={()=>setHamburger(!isHamburger)}>
                     {item.title}
                 </NavLink>

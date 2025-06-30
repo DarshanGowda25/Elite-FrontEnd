@@ -136,9 +136,9 @@ function FitnessPage({pageDetails}) {
               style={{backgroundImage:"url('/Image/BG.jpg')"}}>
                 <div className='absolute inset-0 bg-black/30 z-1'></div>
                 <img src='/Image/FitnessCard3.png' className='h-[100px] w-[100px] mx-auto mt-3'></img>
-                <h1 className={`text-4xl font-bold text-center ${getTextColor()} relative z-2`}>Unlimited access to</h1>
-                <h1 className={`text-6xl font-bold text-center ${getTextColor()} mt-2 relative z-2`}>{pageDetails[0].feature0}+</h1>
-                <h1 className='text-3xl  text-white text-center  mt-5 relative z-2'>{pageDetails[0].feature1}</h1>
+                <h1 className={`md:text-4xl text-3xl font-bold text-center ${getTextColor()} relative z-2`}>Unlimited access to</h1>
+                <h1 className={`md:text-6xl text-2xl font-bold text-center ${getTextColor()} mt-2 relative z-2`}>{pageDetails[0].feature0}+</h1>
+                <h1 className='md:text-3xl  text-white text-center  mt-5 relative z-2'>{pageDetails[0].feature1}</h1>
 
               </div>
 

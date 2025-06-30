@@ -39,11 +39,11 @@ function Orders() {
         <h1 className='mt-20 ml-80 text-xl font-bold'>All Orders</h1>
         <div className='h-auto w-[95%] md:w-[60%]  bg-gray-100 mx-auto flex flex-col items-center py-10 gap-5 mb-15'>
 
-        { orders?.map((item,idx)=>(
-            <OrderCard key={idx} item={item} />
-        ))
-            
-        }
+        { orders?.slice().reverse().map((item, idx) => (//slice() creates a shallow copy of the array to avoid mutating the original orders array.
+        //reverse() then reverses the order in-place (of the copied array).
+        <OrderCard key={idx} item={item} />
+        )) }
+
         </div>
         
 

@@ -115,9 +115,11 @@ function PaymentPage() {
             navigate("/store")
           }}>Cancel </button>
           <button className={`w-[35%] text-sm text-white p-2 md:p-3 
-          ${paymentMode === "" ? "bg-gray-700 cursor-not-allowed":"cursor-pointer  bg-eliteGray"}`}
+          ${paymentMode === "" && !orderProductMutation.isPending ? "bg-gray-700 cursor-not-allowed":"cursor-pointer  bg-eliteGray"}`}
           onClick={()=>{
+            if(!orderProductMutation.isPending){
             orderProductMutation.mutate();
+            }
           }}
           disabled={paymentMode === ""}
           >Confirm Order</button>
