@@ -13,11 +13,19 @@ import toast from 'react-hot-toast';
 import { TbLockPassword } from "react-icons/tb";
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import CustomLoader from '../UI_Components/CustomLoader';
+import UserLogin from './UserLogin';
 
 
 
 
 function ProfileItems() {
+    const token = localStorage.getItem('token')
+  console.log(token)
+
+  // If not logged in, only show login page
+  if (!token) {
+    return <UserLogin />
+  }
     const [openModel,setModel] = useState(true);
     const [logoutModel,setLogoutModel] = useState(false);
     const queryClient = useQueryClient();
