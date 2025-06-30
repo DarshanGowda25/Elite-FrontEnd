@@ -36,7 +36,7 @@ function Orders() {
         {
             isFetching && <ContentLoader/>
         }
-        <h1 className='mt-20 ml-80 text-xl font-bold'>All Orders</h1>
+        <h1 className='md:mt-15 mt-20 mb-5 uppercase  text-xl font-bold text-center'>All Orders</h1>
         <div className='h-auto w-[95%] md:w-[60%]  bg-gray-100 mx-auto flex flex-col items-center py-10 gap-5 mb-15'>
 
         { orders?.slice().reverse().map((item, idx) => (//slice() creates a shallow copy of the array to avoid mutating the original orders array.
