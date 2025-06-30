@@ -82,28 +82,28 @@ return (
             <ul className='w-full md:pl-6 mt-10 '>
 
                 <NavLink to='profileOrders' className={({isActive})=>`${isActive?'text-eliteGold border-r-4 border-eliteGold':'text-black border-0 hover:text-gray-600'}
-                w-full p-4 flex relative items-center `}>
-                    Orders <AiOutlineShoppingCart className='absolute right-2 text-xl'/>
+                w-full p-4 flex relative items-center  mr-2`}>
+                    Orders <AiOutlineShoppingCart className='absolute right-2 md:right-4 text-xl'/>
                 </NavLink>
 
                 <NavLink to='profileConsultancy' className={({isActive})=>`${isActive?'text-eliteGold border-r-4 border-eliteGold':'text-black border-0 hover:text-gray-600'}
-                w-full p-4 flex relative items-center`}>
-                    Consultancy <RiHeartPulseLine className='absolute right-2 text-xl'/>
+                w-full p-4 flex relative items-center mr-6`}>
+                    Consultancy <RiHeartPulseLine className='absolute right-2 md:right-4  text-xl'/>
                 </NavLink>
 
                 <NavLink to='profileMembership' className={({isActive})=>`${isActive?'text-eliteGold border-r-4 border-eliteGold':'text-black border-0 hover:text-gray-600'}
-                w-full p-4 flex relative items-center `}>
-                    Membership <MdCardMembership className='absolute right-2 text-xl'/>
+                w-full p-4 flex relative items-center mr-6`}>
+                    Membership <MdCardMembership className='absolute right-2 md:right-4  text-xl'/>
                 </NavLink>
 
                 <NavLink to='passwordRest' className={({isActive})=>`${isActive?'text-eliteGold border-r-4 border-eliteGold':'text-black border-0 hover:text-gray-600'}
-                w-full p-4 flex relative items-center `}>
-                    Rest Password <TbLockPassword  className='absolute right-2 text-xl'/>
+                w-full p-4 flex relative items-center mr-6`}>
+                    Rest Password <TbLockPassword  className='absolute right-2 md:right-4  text-xl'/>
                 </NavLink>
 
                 <NavLink to='' className={`${logoutModel?'text-eliteGold border-r-4 border-eliteGold':'text-black border-0 hover:text-gray-600'}
                 w-full p-4 flex relative items-center `} onClick={()=>setLogoutModel(true)}>
-                    Logout <HiOutlineLogout  className='absolute right-2 text-xl'/>
+                    Logout <HiOutlineLogout  className='absolute right-2 md:right-4  text-xl'/>
                 </NavLink>
                
              
