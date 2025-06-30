@@ -36,6 +36,11 @@ function NavBar() {
     const activeClass = `!border-eliteGold !text-eliteGold `;
 
     const navItems = [
+        {
+            title : "Profile",
+            link : "/profile"
+
+        },
         {   
             title : "Home",
             link  :  "/"
@@ -55,6 +60,7 @@ function NavBar() {
             link : "/store"
 
         }
+
     ]
   console.log(location.pathname)
   return (
@@ -84,6 +90,7 @@ function NavBar() {
     md:top-0 md:space-y-0 md:p-0 md:left-[475px] md:m-0 md:h-[78px]
      
     `} >
+       
         {navItems.map((item,idx)=>(
                 <NavLink key={idx} to={item.link} className={({ isActive }) => `${navLinkClass} ${isActive ? activeClass : ''} h-[50px] md:h-auto w-[40%]`}
                 onClick={()=>setHamburger(!isHamburger)}>
@@ -94,6 +101,7 @@ function NavBar() {
          onClick={()=>setHamburger(!isHamburger)}
           ><Link to='/signIn'className='flex gap-2 h-full w-full'> <p>Sign In</p> 
          <LogIn className="w-5 h-5 text-white ml-2 mt-0.5"/></Link></li>
+       
     </ul>
     
     
