@@ -33,10 +33,10 @@ const {data,isFetching}  =  useQuery({
 
 
       {/* Hero Section */}
-      <section className='relative w-full h-[70%]'>
+      <section className='relative w-full md:h-full h-[70%] '>
         
 
-        <div className='w-full   relative'>
+        <div className='w-full md:h-full  relative'>
           <Swiper
           modules={[Autoplay]}
           autoplay={{delay: "2500", disableOnInteraction: false}}
@@ -45,9 +45,9 @@ const {data,isFetching}  =  useQuery({
           speed={1100}
           className='h-screen overflow-hidden'
           >
-            <SwiperSlide><img src='/Image/StoreImg1.png' className='w-full h-[47%] mt-38' alt="Store promotion 1" /></SwiperSlide>
-            <SwiperSlide><img src='/Image/StoreImg2.png' className='w-full h-[47%] mt-38' alt="Store promotion 2" /></SwiperSlide>
-            <SwiperSlide><img src='/Image/StoreImg3.png' className='w-full h-[47%] mt-38' alt="Store promotion 3" /></SwiperSlide>
+            <SwiperSlide><img src='/Image/StoreImg1.png' className='w-full md:h-full h-[47%] md:mt-0 mt-38' alt="Store promotion 1" /></SwiperSlide>
+            <SwiperSlide><img src='/Image/StoreImg2.png' className='w-full md:h-full h-[47%] md:mt-0 mt-38' alt="Store promotion 2" /></SwiperSlide>
+            <SwiperSlide><img src='/Image/StoreImg3.png' className='w-full md:h-full h-[47%] md-mt-0 mt-38' alt="Store promotion 3" /></SwiperSlide>
           </Swiper>
           
         </div>
