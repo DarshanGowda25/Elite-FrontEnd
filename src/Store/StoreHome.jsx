@@ -36,7 +36,7 @@ const {data,isFetching}  =  useQuery({
       <section className='relative w-full h-full'>
         
 
-        <div className='w-full h-full  relative'>
+        <div className='w-full h-full   relative'>
           <Swiper
           modules={[Autoplay]}
           autoplay={{delay: "2500", disableOnInteraction: false}}
