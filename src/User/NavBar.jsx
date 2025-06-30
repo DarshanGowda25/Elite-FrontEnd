@@ -82,7 +82,7 @@ function NavBar() {
     flex flex-col items-center absolute top-20 left-0 w-full text-center z-50 !backdrop-blur-3xl  md:!backdrop-blur-none bg-black/96 md:bg-black/0
     md:w-auto md:flex md:flex-row md:justify-center md:items-center md:gap-[4px] md:text-white md:absolute md:uppercase md:font-bold
     md:top-0 md:space-y-0 md:p-0 md:left-[475px] md:m-0 md:h-[78px]
-     ${location.pathname === '/store' || location.pathname === '/fitness' ? "top-30":"top-20"}  
+     
     `} >
         {navItems.map((item,idx)=>(
                 <NavLink key={idx} to={item.link} className={({ isActive }) => `${navLinkClass} ${isActive ? activeClass : ''} h-[50px] md:h-auto w-[40%]`}
