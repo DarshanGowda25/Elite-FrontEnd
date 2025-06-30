@@ -69,10 +69,10 @@ return (
         <MdOutlinePlaylistRemove className={`text-2xl absolute right-2 mt-2 md:hidden`} onClick={()=>setModel(false)}/> 
 
         
-            <div className='w-full flex  md:px-10 h-[220px] md:h-[150px] items-center hover:shadow-md border-b-2 border-gray-100'>
+            <div className='w-full flex justify-center  md:px-10 h-[220px] md:h-[150px] items-center hover:shadow-md border-b-2 border-gray-100'>
                 <LuUser  className='hidden md:flex text-black text-3xl ml-2 md:text-6xl '/>
-                <div className='flex flex-col'>
-                <LuUser  className='md:hidden text-black text-3xl ml-15 md:text-6xl '/>
+                <div className='flex flex-col items-center'>
+                <LuUser  className='md:hidden text-black text-3xl  md:text-6xl'/>
                     <h1 className='ml-2 md:ml-5 text-lg  md:text-xl'>{name}</h1>
                     <Link to=''>
                     <h1 className=' ml-2 md:ml-5 text-xs text-eliteGold cursor-pointer hover:text-amber-300 uppercase font-bold'>view profile</h1>
