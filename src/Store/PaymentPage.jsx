@@ -58,7 +58,7 @@ function PaymentPage() {
 
       
         {showSuccessLoader && 
-        <div className='h-full w-full bg-white z-49 place-content-center'>
+        <div className='h-full w-full bg-white z-48 place-content-center'>
         <SuccessLoader />  
         
       </div>

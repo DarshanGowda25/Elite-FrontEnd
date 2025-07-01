@@ -4,6 +4,7 @@ import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { CgProfile } from "react-icons/cg";
 import { RiAccountCircleFill } from "react-icons/ri";
 import { FaRegUser } from "react-icons/fa";
+import Item from 'antd/es/list/Item';
 
 function NavBar() {
 
@@ -67,7 +68,7 @@ function NavBar() {
     <section className={`fixed top-0 left-0 z-50 w-full m-0     
     `}>
     <nav className={`w-full h-[80px] flex justify-center items-center transition-all duration-300 
-    ${['/', '/signIn', '/signUp', '/fitness', '/fitness/elitePro', '/fitness/elitePlus'].includes(location.pathname) 
+    ${['/', '/signIn', '/signUp','/forgotPassword', '/fitness', '/fitness/elitePro', '/fitness/elitePlus'].includes(location.pathname) 
     ? 'bg-transparent backdrop-blur-3xl' : 'bg-eliteBlack'}
     ${location.pathname.startsWith('/store') ? 'sm:hidden' : 'flex'}
 
@@ -92,7 +93,8 @@ function NavBar() {
     `} >
        
         {navItems.map((item,idx)=>(
-                <NavLink key={idx} to={item.link} className={({ isActive }) => `${navLinkClass} ${isActive ? activeClass : ''} h-[50px] md:h-auto w-[40%]`}
+                <NavLink key={idx} to={item.link} className={({ isActive }) => `${navLinkClass} ${isActive ? activeClass : ''} h-[50px] md:h-auto w-[40%]
+                ${item.title === "Profile" ? "md:hidden flex justify-center" : "flex justify-center"}`}
                 onClick={()=>setHamburger(!isHamburger)}>
                     {item.title}
                 </NavLink>

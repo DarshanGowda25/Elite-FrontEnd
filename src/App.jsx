@@ -35,6 +35,7 @@ import Products from './Admin/Products';
 import Memberships from './Admin/Memberships';
 import Queries from './Admin/Queries';
 import AllOrders from './Admin/AllOrders';
+import ForgotPassword from './User/ForgotPassword';
 
 
 
@@ -63,6 +64,7 @@ function App() {
           <Route index element={<Home/>} />
           <Route path="/signUp" element={<UserSignUp />} />
           <Route path="/signIn" element={<UserLogin />} />
+          <Route path='/forgotPassword' element={<ForgotPassword/>}/>
         
           <Route path='/fitness' element={<Fitness/>}>
               <Route index element={<Elite/>}/>

@@ -87,7 +87,7 @@ function AddAddress() {
     md:flex-row md:items-center relative  ${newAddress ? "w-full bg-black/75 md:bg-black/0":""}`}>
 
 
-    {/* order Summary */}
+    {/* order Summary laptop*/}
     <section className='hidden md:flex flex-col w-[30%] h-[500px]  py-10 px-5 absolute top-30 left-15 '>
         <Order orderSummary={orderSummary} ProductsDetails={ProductsDetails} addressDetails={addressDetails} source={source}/>
     </section>
@@ -112,22 +112,24 @@ function AddAddress() {
       
     </div>
 
-    {/* order Summary */}
-    <section className={`md:hidden  w-[95%] md:w-[30%] h-[500px]  py-5 px-5 md:absolute md:bottom-0 mt-15
-       `}>
-        <Order orderSummary={orderSummary} ProductsDetails={ProductsDetails} source={source}/>
-    </section>
-      
-
-
-      
-    </section>
-
     {/* //add Address */}
-    <section className='absolute  bottom-35 ml-5 md:bottom-15 md:right-48 h-[40px] md:h-[50px] w-[60%] md:w-[41%] border-2 border-dotted border-gray-400 place-content-center cursor-pointer'
+    <section className=' h-[40px] md:h-[50px] w-[60%] md:w-[41%] border-2 border-dotted border-gray-400 place-content-center cursor-pointer'
     onClick={()=>{setNewAddress(true)}}>
         <span className='text-center text-gray-700 flex justify-center'><FiPlus className='text-2xl mr-1'/> Add New Address</span>
     </section>
+
+    {/* order Summary mobile*/}
+    <section className={`md:hidden  w-[95%] md:w-[30%] h-[500px]  py-5 px-5 md:absolute md:bottom-0 mt-5
+       `}>
+        <Order orderSummary={orderSummary} ProductsDetails={ProductsDetails} addressDetails={addressDetails} source={source}/>
+    </section>
+      
+
+
+      
+    </section>
+
+    
 
     {
         newAddress && (

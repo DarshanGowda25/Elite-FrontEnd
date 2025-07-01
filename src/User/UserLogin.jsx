@@ -140,7 +140,7 @@ function UserLogin() {
 
 
                   <div className='w-full flex  flex-col justify-center items-center mt-6'>
-                  <Link to="#">
+                  <Link to="/forgotPassword">
                     <p className="text-sm text-eliteGold underline-offset-4 hover:underline hover:text-white transition-all duration-200 sm:relative  sm:right-[140px]">
                       Forgot password!
                     </p>

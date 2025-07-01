@@ -244,6 +244,7 @@ export function Order({orderSummary,ProductsDetails,addressDetails,source}){
    const{price,discountAmount,totalAmount,totalItems,convenienceFee} = orderSummary
    const navigate = useNavigate();
    const location = useLocation();
+
   
   return(
     <>
@@ -283,10 +284,10 @@ export function Order({orderSummary,ProductsDetails,addressDetails,source}){
 
       </div>
       <button className={`p-3 w-full bg-eliteGray text-white mt-10 hover:bg-gray-700
-        ${totalItems === 0 || location.pathname === "/store/addAddress" && Object.keys(addressDetails || {}  ).length  === 0 ? "cursor-not-allowed opacity-50" : "cursor-pointer"}
+        ${totalItems === 0 || (location.pathname === "/store/addAddress" && Object.keys(addressDetails || {}  ).length  === 0) ? "cursor-not-allowed opacity-50" : "cursor-pointer"}
         ${location.pathname === "/store/payment"? "hidden": " "}
         `} 
-        disabled={totalItems === 0 || location.pathname === "/store/addAddress" && Object.keys(addressDetails || {} ).length === 0}
+        disabled={totalItems === 0 || (location.pathname === "/store/addAddress" && Object.keys(addressDetails || {} ).length === 0)}
 
 
           onClick={() => {
