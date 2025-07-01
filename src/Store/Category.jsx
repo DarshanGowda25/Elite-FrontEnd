@@ -127,7 +127,7 @@ export default function Category() {
       onClick={() => setMobileFilter(true)}
       /></span>
 
-      <div className={`w-[175px] md:w-[20%] h-[600px] flex flex-col px-3  md:px-15 font-semibold !overflow-hidden fixed
+      <div className={`w-[175px] md:w-[20%] h-screen flex flex-col px-3  md:px-15 font-semibold !overflow-hidden fixed
       top-29 md:top-[70px]  left-0 z-20 shadow-2xl md:shadow-none bg-white
       ${openMobileFilter?"flex":"hidden md:flex"}
       `}>
