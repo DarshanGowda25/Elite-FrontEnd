@@ -112,7 +112,7 @@ function ForgotPassword() {
             required
             />
 
-            <div className='md:w-[40%] w-[70% flex items-center justify-start md:gap-5 gap-3 relative'>
+            <div className='md:w-[40%] w-[70%] flex items-center justify-start md:gap-5 gap-3 relative'>
             <input type='text'
             name='otp'
             value={otp}

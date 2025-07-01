@@ -158,7 +158,7 @@ function UserLogin() {
                     
                     <p className={`text-sm text-eliteGold underline-offset-4   sm:relative  sm:left-[100px]
                       ${location.pathname === '/adminLogin' ? "hidden" : "flex"}`}>
-                      Don't have account? <Link to="/signUp"><b className='hover:underline hover:text-white transition-all duration-200'> SignUp</b></Link> 
+                      Don't have account?<Link to="/signUp"><b className='hover:underline hover:text-white transition-all duration-200 ml-1'>SignUp</b></Link> 
                     </p>
                   
                    
