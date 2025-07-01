@@ -94,7 +94,7 @@ function Home() {
     },
     {
       link: '/Image/HomeCard3.png',
-      title: 'Weight Traing',
+      title: 'Weight Training',
       text: "Strength isn’t given, it’s earned. Join us and lift your potential. Your strength begins where your comfort ends."
     },
     {

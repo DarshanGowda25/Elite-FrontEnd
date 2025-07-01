@@ -313,7 +313,7 @@ export function Order({orderSummary,ProductsDetails,addressDetails,source}){
         
         >
           {
-            location.pathname === "/store/cart" ? (<p>checkout</p>) : 
+            location.pathname === "/store/cart" ? (<p>Checkout</p>) : 
             (<p>Proceed to pay</p>) 
           }
           
