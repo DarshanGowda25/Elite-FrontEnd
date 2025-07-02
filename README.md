@@ -6,7 +6,7 @@ This is the **frontend** for the **EliteFit** web application — a gym slot boo
 
 ## 🌐 Live Site
 
-👉 [(https://elitefit.vercel.app)](https://elite-front-end-delta.vercel.app/)
+👉 [https://elite-front-end-delta.vercel.app/](https://elite-front-end-six.vercel.app/)
 
 ---
 
