@@ -239,7 +239,7 @@ function Home() {
 
         
       {/* //Contact us */}
-      <section id="contactUs" className='h-auto w-full bg-[#141414] flex pt-24 pb-24 px-5' >
+      <section id="contactUs" className='h-auto w-full bg-[#141414] flex pt-24 pb-24 px-5 white-autofill' >
 
           <form onSubmit={handleSubmit} className='h-auto md:w-[50%] w-[100%]  flex flex-col gap-10  text-white  pt-10 px-4 md:px-10'>
             <input
