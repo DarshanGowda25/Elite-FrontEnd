@@ -115,13 +115,13 @@ function BookAppointment() {
           required/>
 
           <input type='number'
-           name='height' value={formData.height} onChange={handleChange} 
+           name='height' value={formData.height||""} onChange={handleChange} 
           className='p-1 md:p-2 w-[95%] md:w-[80%] rounded border-b-1 border-eliteBlack' placeholder='height in cm' 
           min='0'
           required/>
 
           <input type='number' 
-          name='weight' value={formData.weight} onChange={handleChange} 
+          name='weight' value={formData.weight||""} onChange={handleChange} 
           className='p-1 md:p-2 w-[95%] md:w-[80%] rounded border-b-1 border-eliteBlack' placeholder='weight in kg' 
           min='0'
           required/>

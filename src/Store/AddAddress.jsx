@@ -68,7 +68,8 @@ function AddAddress() {
   const addressRemoveMutation = useMutation({
     mutationKey : ['deleteAddress'],
     mutationFn: removeAddress,
-    onSuccess:()=>{
+    onSuccess:(data)=>{
+      toast.success(data.status)
       refetch();
     },
     onError : (error) => {

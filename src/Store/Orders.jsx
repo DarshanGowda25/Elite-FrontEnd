@@ -104,7 +104,7 @@ function OrderCard({item}){
                     </div>
                     <div className='flex flex-col tems-center'>
                     <h1 className='text-green-800 font-bold'>{orderStatus}</h1>
-                    <h1 className='font-bold text-gray-600 text-xs'>order date : {date[0]}</h1>
+                    <h1 className='font-bold text-gray-600 text-xs'>order date : {`${orderDate}`}</h1>
                     </div>
                 </div>
                 <div className='h-[175px] w-[95%] md:w-[90%] bg-gray-100 relative cursor-pointer'
