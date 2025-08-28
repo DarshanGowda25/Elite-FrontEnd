@@ -107,8 +107,9 @@ function PaymentPage() {
 
             if (verifyRes.data.success) {
               toast.success("Payment Verified & Successful!");
-              orderProductMutation.mutate();
               setShowSuccessLoader(true);
+              orderProductMutation.mutate();
+              
             } else {
               toast.error("Payment verification failed!");
             }
