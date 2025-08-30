@@ -2,7 +2,7 @@ import { ErrorMessage, Form, Formik } from 'formik'
 import React, { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { UserLoginValidation } from '../Form/FormValidation'
-import { useMutation } from '@tanstack/react-query'
+import { QueryClient, useMutation, useQueryClient } from '@tanstack/react-query'
 import toast from 'react-hot-toast'
 import { getErrorMsg, serverUrl, serverUrlAPI } from '../Utils/info'
 import axios from 'axios'
@@ -13,6 +13,7 @@ import { Eye, EyeOff } from 'lucide-react'
 function UserLogin() {
   const location = useLocation();
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
 
     const [showPassword,setShowPassword] = useState(false);
   
@@ -33,6 +34,7 @@ function UserLogin() {
     mutationKey:['User-SignIn'],
     mutationFn:UserSignIn,
     onSuccess:(data)=>{
+      queryClient.clear();
       localStorage.removeItem('token');
       const{token,role} = data;
       console.log(role)

@@ -1,7 +1,8 @@
-import { useQuery, useQueryClient } from '@tanstack/react-query'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import React from 'react'
 import { axiosInstance } from '../Utils/axioInstance';
-import { serverUrlAPI } from '../Utils/info';
+import { getErrorMsg, serverUrlAPI } from '../Utils/info';
+import toast from 'react-hot-toast';
 
 function ProfileMemberships() {
 
@@ -14,7 +15,7 @@ function ProfileMemberships() {
   }
 
 
-  const{data,isLoading}  = useQuery({
+  const{data,isLoading,refetch}  = useQuery({
     queryKey:['memberships'],
     queryFn:fetchMemberships,
     staleTime:Infinity,
@@ -22,6 +23,28 @@ function ProfileMemberships() {
     enabled:!queryClient.getQueryData('memberships')
 
   })
+  
+
+  const deleteMemberShip = async(id) =>{
+    console.log(id)
+    const response = await axiosInstance.delete(`${serverUrlAPI}membership/delete?id=${id}`);
+    console.log(response.data);
+    return response.data;
+  }
+
+  const deleteMembershipMutation = useMutation({
+  mutationKey: ['deleteMembership'],
+  mutationFn: deleteMemberShip,
+  onSuccess: (data) => {
+    queryClient.invalidateQueries(['memberships']); 
+    toast.success(data)
+  },
+  onError: (error) => {
+    toast.error(getErrorMsg(error));
+  },
+});
+
+
 
 
 
@@ -32,7 +55,8 @@ function ProfileMemberships() {
         data && data.length > 0 ?
         (
           data.map((item , idx)=>(
-            <Card key={idx} item={item}/>
+            
+            <Card key={idx} item={item} deleteMembershipMutation={deleteMembershipMutation} />
           ))
 
         ):(
@@ -48,8 +72,9 @@ function ProfileMemberships() {
 export default ProfileMemberships
 
 
-function Card({item}){
-  const {type,price,payment_status,center,start_date,end_Date} = item
+function Card({item,deleteMembershipMutation}){
+
+  const {type,price,payment_status,center,start_date,end_Date,memberShip_id} = item
 
 
   return(
@@ -64,6 +89,17 @@ function Card({item}){
         </div>
         <h1 className={`absolute top-2 right-2 md:right-10 text-xs text-red-600`}>
           Expires on : <b>{end_Date}</b> </h1>
+
+        {
+          payment_status === "pending" && (
+            <h1 className='absolute right-2 md:right-8 bottom-10 md:bottom-15 p-2 border-2 text-white bg-red-400 rounded-2xl px-2 text-xs md:text-sm capitalize cursor-pointer'
+            onClick={()=>{
+              deleteMembershipMutation.mutate(memberShip_id);
+            }}>Cancel</h1>
+          )
+        } 
+        
+
         <h1 className={`absolute right-2 md:right-8 bottom-2 md:bottom-5 p-2 border-2 text-white ${payment_status==="pending" ? "bg-red-400" : "bg-green-400"} 
         rounded-2xl px-2 text-xs md:text-sm capitalize`}>
           payment : {payment_status}</h1>

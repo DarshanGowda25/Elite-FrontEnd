@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
-import { Navigate, useLocation, useNavigate } from 'react-router-dom'
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { PurchaseCard } from './FitnessPage';
 import { MdOutlineLocationOn } from "react-icons/md";
 import { IoCalendarOutline } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 import { AiFillTag } from "react-icons/ai";
 import toast from 'react-hot-toast';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { getErrorMsg, serverUrlAPI } from '../Utils/info';
 import { axiosInstance } from '../Utils/axioInstance';
 import CustomLoader from '../UI_Components/CustomLoader';
+import { RiFolderWarningFill } from "react-icons/ri";
+import { MdClose } from "react-icons/md";
 
 
 
@@ -19,6 +21,7 @@ function Buy() {
    
     const location = useLocation();
     const navigate = useNavigate();
+    const [openConfrimModel,setConfirmModel] = useState(false);
 
     const queryClient = useQueryClient();
     const user = queryClient.getQueryData('userProfile');
@@ -67,6 +70,7 @@ function Buy() {
         console.log(start_date.toISOString().split('T')[0])
         console.log(end_date.toISOString().split('T')[0])
 
+        //membership buy
         const response = await axiosInstance.post(`${serverUrlAPI}membership/register`,{
             start_Date:start_date.toISOString().split('T')[0],
             end_Date:end_date.toISOString().split('T')[0],
@@ -76,11 +80,7 @@ function Buy() {
             type:details.type,
             payment_status:"pending"
 
-           
-
-
             
-
         });
         return response.data;
     }
@@ -89,6 +89,8 @@ function Buy() {
         mutationKey:['buyMembership'],
         mutationFn:buyFunction,
         onSuccess:(data)=>{
+
+            refetch();
             toast.success(data.status);
             formData.center=""
             formData.date=""
@@ -102,6 +104,22 @@ function Buy() {
         }
 
     })
+    // check old membership
+    const getMembership = async() =>{
+        const response = await axiosInstance.get(`${serverUrlAPI}membership/getMembership`)
+       console.log(response)
+        return response.data;
+    }
+    const{ data: memberShipData,refetch}=useQuery({
+        queryKey : ['getMembership'],
+        queryFn:getMembership,
+        staleTime:Infinity,
+        refetchOnWindowFocus:false,
+
+
+    })
+    
+    
 
 
 
@@ -132,7 +150,7 @@ function Buy() {
                 e.preventDefault();
                 const token = localStorage.getItem('token');
                 if(token){
-                    buyMutation.mutate(formData);
+                    !memberShipData  ? (buyMutation.mutate(formData)) : setConfirmModel(true);
                 }else{
                     navigate('/signIn');
                     toast.error("please Login")
@@ -186,7 +204,8 @@ function Buy() {
 
                 <button type='submit' className='absolute bottom-3 rounded-4xl text-white right-0 p-2 bg-eliteGold
                 hover:shadow-[0_0_12px_rgba(212,175,55,0.5)] mb-2 cursor-pointer
-                '>Get Membership</button>
+                '
+                >Get Membership</button>
 
             </form>
 
@@ -197,6 +216,48 @@ function Buy() {
             <h1 className='flex  text-white'><AiFillTag className='text-eliteGold text-lg mt-1 mr-2'/> {purchaseDetails.p4}</h1>
 
         </div> 
+
+        {
+            openConfrimModel&&(
+            <section className='h-screen w-full fixed z-[999] top-0 left-0 bg-[rgba(0,0,0,0.7)] flex items-center justify-center overflow-hidden'
+            onClick={()=>setConfirmModel(false)}>
+                <div className='h-[315px] w-[550px] bg-center bg-cover relative'
+                style={{backgroundImage:"url('/Image/BG.jpg')"}}>
+                    <MdClose className='absolute right-2 top-2 text-2xl text-eliteGold cursor-pointer'
+                    onClick={()=>{
+                        setConfirmModel(false)
+                    }}/>
+                    <h1 className='text-center mt-6 text-eliteGold text-2xl'>Your latest valid membership</h1>
+                    <h1 className='text-white ml-15 mt-6'>Membership Type: Elite {memberShipData.type}</h1>
+                    <h1 className='text-white ml-15 mt-2'>Valid Till: {memberShipData.end_Date}</h1>
+                    <h1 className='text-white ml-15 mt-2 capitalize'>Center: {memberShipData.center}</h1>
+                    <p className='ml-10 mt-6 text-xs text-white flex pr-4'><RiFolderWarningFill className='text-xl text-eliteGold mr-2' text-eliteGold/>
+                    Your Current Membership is still valid till {memberShipData.end_Date}. Still if you want to continue?</p>
+                   
+                        {memberShipData.type === "" && (details.type === "Pro" || details.type === "Plus") &&
+                        (<div className=' text-white text-center'>
+                        Upgrade To 
+                        <Link to = "/fitness/elitePlus" className='text-eliteGold cursor-pointer'> Elite Plus </Link>
+                         or  
+                         <Link to = "/fitness/elitePro" className='text-eliteGold cursor-pointer'> Elite Pro</Link></div>)}
+
+                        {memberShipData.type === "Pro" && details.type === "Pro" &&
+                        (<div className=' text-white text-center'>
+                        Upgrade To 
+                        <Link to = "/fitness/elitePlus" className='text-eliteGold cursor-pointer'> Elite Plus </Link>
+                         </div>)}
+
+                        {memberShipData.type === "Plus" && 
+                        (<p className='text-center  text-xs text-eliteGold'>You have already have premium membership</p>)}
+                        
+                        <p className='text-[10px] mt-5 text-white text-center'>(Upgrade anywhay)</p>
+                        <p className='text-xl text-eliteGold text-center  cursor-pointer'
+                        onClick={()=>{
+                        buyMutation.mutate(formData);
+                        }}>Click Upgrade!</p>
+                </div>
+            </section> 
+        )}
 
 
     </div>
