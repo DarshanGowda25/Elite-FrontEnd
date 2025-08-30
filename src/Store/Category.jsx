@@ -212,7 +212,7 @@ export default function Category() {
 
 
       {/* //display products */}
-      <section id="scrollableDiv" className='relative  w-full h-full  md:pl-[310px] pt-[90px] md:pt-[70px] overflow-y-scroll scrollbar-hidden bg-eliteGray md:bg-white'>
+      <section id="scrollableDiv" className='relative  w-full h-full  md:pl-[310px] pt-[90px] md:pt-[70px] overflow-y-scroll scrollbar-hidden bg-eliteBlack md:bg-white'>
         {productDataLoading && <ContentLoader/>}
         {productContent?.length === 0 ? (<Error />) 
         : (
