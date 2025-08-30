@@ -122,7 +122,7 @@ export default function Category() {
 
     <div  className='max-w-screen h-screen lg:max-w-[1800px] overflow-x-hidden overflow-y-auto scrollbar-hidden  scroll-smooth flex '>
 
-      <span className={` fixed top-40 left-6 flex z-50 md:text-white text-eliteGold font-extrabold ${openMobileFilter?"hidden":"flex md:hidden"} `}
+      <span className={` fixed top-40 left-6 flex z-5 text-eliteGold md:text-white font-extrabold ${openMobileFilter?"hidden":"flex md:hidden"} `}
       >Filter <FaFilter className='mt-[6px] ml-2   md:text-eliteGray text-eliteGold'
       onClick={() => setMobileFilter(true)}
       /></span>
@@ -212,7 +212,7 @@ export default function Category() {
 
 
       {/* //display products */}
-      <section id="scrollableDiv" className='relative  w-full h-full  md:pl-[310px] pt-[90px] md:pt-[70px] overflow-y-scroll scrollbar-hidden bg-eliteBlack md:bg-white'>
+      <section id="scrollableDiv" className='relative  w-full h-full  md:pl-[310px] pt-[90px] md:pt-[70px] overflow-y-scroll scrollbar-hidden bg-eliteGray md:bg-white'>
         {productDataLoading && <ContentLoader/>}
         {productContent?.length === 0 ? (<Error />) 
         : (
@@ -224,7 +224,7 @@ export default function Category() {
           hasMore={hasNextPage}
           scrollableTarget="scrollableDiv"
           >
-             <div  className=' relative h-auto w-full  flex flex-wrap gap-0 my-15 '>
+             <div  className=' relative h-auto w-[100%]  flex flex-wrap md:gap-11 md:px-2 my-15 '>
             {
               productContent?.map((product,idx)=>(
                 <ProductCards key={idx} product={product} className=""/>
@@ -260,8 +260,8 @@ export function ProductCards({product}){
   const navigate = useNavigate();
   const {name,rating,price,discount,description,image,available} = product
   return(
-    <div  className={`md:h-[325px] h-[320px] bg-white shadow-2xl cursor-pointer px-[30px] box-border overflow-hidden relative md:ml-0  border-b-2 border-black
-      ${location.pathname === "/admin/products" ? "w-[250px]" : "w-[50%]"}`}
+    <div  className={`md:h-[325px] h-[315px] bg-white shadow-2xl cursor-pointer px-[30px] box-border overflow-hidden relative md:ml-0  border-b-2  border-eliteBlack
+      ${location.pathname === "/admin/products" ? "w-[250px]" : "w-[50%] md:w-[260px]"}`}
     onClick={()=>{
       if(location.pathname === "/admin/products"){
         navigate("#",{ state: product })
@@ -271,7 +271,7 @@ export function ProductCards({product}){
       
     }}>
     <div className='flex flex-col justify-center relative'>
-      <img src={image} className='h-[180px] w-[200px] object-contain mt-5 mb-2' 
+      <img src={image} className='h-[200px] min-w-full object-contain  mb-1' 
         alt='Product'/>
      
     </div>
