@@ -260,7 +260,7 @@ export function ProductCards({product}){
   const navigate = useNavigate();
   const {name,rating,price,discount,description,image,available} = product
   return(
-    <div  className={`md:h-[325px] h-[315px] bg-white shadow-2xl cursor-pointer px-[30px] box-border overflow-hidden relative md:ml-0  md:border-0 border-b-2  border-eliteBlack
+    <div  className={`md:h-[325px] h-[315px] bg-white shadow-2xl cursor-pointer px-[30px] box-border overflow-hidden relative md:ml-0 md:border-0 border-b-2  border-eliteBlack
       ${location.pathname === "/admin/products" ? "w-[250px]" : "w-[50%] md:w-[260px]"}`}
     onClick={()=>{
       if(location.pathname === "/admin/products"){
@@ -271,7 +271,7 @@ export function ProductCards({product}){
       
     }}>
     <div className='flex flex-col justify-center relative'>
-      <img src={image} className='h-[200px] min-w-full object-contain  mb-1' 
+      <img src={image} className='h-[180px] w-[200px] object-contain mt-5 mb-2' 
         alt='Product'/>
      
     </div>
