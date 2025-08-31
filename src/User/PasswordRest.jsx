@@ -50,7 +50,7 @@ function PasswordRest() {
   return (
     <div className='h-full w-full place-content-center'>
 
-      <div className='h-auto w-[40%] mx-auto shadow-2xl p-10'>
+      <div className='h-auto w-[75%] md:w-[40%] mx-auto shadow-2xl p-10'>
         <form className='h-full w-full flex flex-col items-center gap-4 pt-5'
         onSubmit={(e)=>{
           e.preventDefault()
@@ -66,7 +66,7 @@ function PasswordRest() {
            name='email'
            value={formData.email}
            readOnly
-           className='p-2 w-[80%]  border-b-1 border-black cursor-not-allowed'
+           className='p-2 w-[90%] md:w-[80%]  border-b-1 border-black cursor-not-allowed'
 
           />
           <input
@@ -75,7 +75,7 @@ function PasswordRest() {
           value={formData.oldPassword}
           onChange={handleChange}
           placeholder='Old password'
-           className='p-2 w-[80%]  border-b-1 border-black'
+           className='p-2 w-[90%] md:w-[80%]  border-b-1 border-black'
            required
           />
           <input
@@ -84,7 +84,7 @@ function PasswordRest() {
           value={formData.newPassword}
           onChange={handleChange}
           placeholder='New password '
-           className='p-2 w-[80%]  border-b-1 border-black'
+           className='p-2 w-[90%] md:w-[80%]  border-b-1 border-black'
            required
           />
           <input
@@ -93,7 +93,7 @@ function PasswordRest() {
           value={formData.conPassword}
           onChange={handleChange}
           placeholder='Confirm password'
-           className='p-2 w-[80%] border-b-1 border-black'
+           className='p-2 w-[90%] md:w-[80%] border-b-1 border-black'
            required
           />
 
