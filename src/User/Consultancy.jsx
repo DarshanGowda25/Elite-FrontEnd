@@ -40,8 +40,11 @@ function Consultancy() {
     <div className="w-full h-screen max-w-[1800px] mx-auto relative bg-[#141414]
     overflow-x-hidden overflow-y-auto scrollbar-hidden">
         
-        <img src="/Image/Consultancy.png" className="w-full h-full object-cover" 
-        style={{ filter: "brightness(40%)" }} />
+        <img src="/Image/Consultancy.png" className="w-full h-full m object-cover hidden md:block" 
+        style={{ filter: "brightness(100%)" }} />
+
+         <img src="/Image/ConsultancyMobile1.png" className="w-full h-full  object-cover md:hidden" 
+        style={{ filter: "brightness(100%)" }} />
 
         <div className='absolute bottom-0 w-full h-[25px] lg:h-[50px] z-[3] bg-gradient-to-b from-[#262626] to-[#141414] border-0'
           style={{
