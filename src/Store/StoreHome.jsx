@@ -33,7 +33,7 @@ const {data,isFetching}  =  useQuery({
 
 
       {/* Hero Section */}
-      <section className='relative w-full md:min-h-full max-h-[54%] '>
+      <section className='relative w-full md:min-h-full max-h-[53%] '>
         
 
         <div className='w-full md:h-full  relative'>
@@ -52,7 +52,7 @@ const {data,isFetching}  =  useQuery({
           
         </div>
     
-        <div className='absolute bottom-0 w-full h-[25px] lg:h-[55px] z-[3] bg-gradient-to-b from-[#D1D5DB] to-[#E5E7EB] border-0'
+        <div className='absolute bottom-0 w-full h-[30px] lg:h-[55px] z-[3] bg-gradient-to-b from-[#D1D5DB] to-[#E5E7EB] border-0'
         style={{
           clipPath: "ellipse(53% 100% at 50% 100%)",
           boxShadow: "inset 0 3px 0 rgb(31, 41, 55)"
