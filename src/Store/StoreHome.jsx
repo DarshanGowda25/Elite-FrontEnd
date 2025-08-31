@@ -60,7 +60,7 @@ const {data,isFetching}  =  useQuery({
         >
 
       </div>
-        <div className='absolute bottom-[-14px] w-full h-[15px] lg:h-[55px] z-[6] bg-[#E5E7EB] border-0'
+        <div className='absolute bottom-[-14px] w-full h-[15px] lg:h-[55px] z-[6] bg-[#E5E7EB] border-0 md:hidden'
         ></div>
       </section>
 
