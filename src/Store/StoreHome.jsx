@@ -33,7 +33,7 @@ const {data,isFetching}  =  useQuery({
 
 
       {/* Hero Section */}
-      <section className='relative w-full md:min-h-full max-h-[53%] '>
+      <section className='relative w-full md:min-h-full max-h-[52%] '>
         
 
         <div className='w-full md:h-full  relative'>
@@ -58,7 +58,10 @@ const {data,isFetching}  =  useQuery({
           boxShadow: "inset 0 3px 0 rgb(31, 41, 55)"
         }}
         >
+
       </div>
+        <div className='absolute bottom-[-14px] w-full h-[15px] lg:h-[55px] z-[6] bg-[#E5E7EB] border-0'
+        ></div>
       </section>
 
 
