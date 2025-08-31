@@ -26,7 +26,7 @@ function ProfileItems() {
   if (!token) {
     return <UserLogin />
   }
-    const [openModel,setModel] = useState(true);
+    const [openModel,setModel] = useState(false);
     const [logoutModel,setLogoutModel] = useState(false);
     const queryClient = useQueryClient();
     const navigate = useNavigate();
