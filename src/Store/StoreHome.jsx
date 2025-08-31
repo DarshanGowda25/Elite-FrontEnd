@@ -33,7 +33,7 @@ const {data,isFetching}  =  useQuery({
 
 
       {/* Hero Section */}
-      <section className='relative w-full md:min-h-full max-h-[53%] '>
+      <section className='relative w-full md:min-h-full max-h-[54%] '>
         
 
         <div className='w-full md:h-full  relative'>
