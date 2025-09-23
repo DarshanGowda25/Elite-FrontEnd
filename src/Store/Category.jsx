@@ -120,7 +120,7 @@ export default function Category() {
   
   return (
 
-    <div  className='max-w-screen h-screen lg:max-w-[1800px] overflow-x-hidden overflow-y-auto scrollbar-hidden  scroll-smooth flex '>
+    <div  className='max-w-screen h-screen  overflow-x-hidden overflow-y-auto scrollbar-hidden  scroll-smooth flex '>
 
       <span className={` fixed top-40 left-6 flex z-5 text-eliteGold md:text-white font-extrabold ${openMobileFilter?"hidden":"flex md:hidden"} `}
       >Filter <FaFilter className='mt-[6px] ml-2   md:text-eliteGray text-eliteGold'

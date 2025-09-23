@@ -37,7 +37,7 @@ function Consultancy() {
  
 
   return (
-    <div className="w-full h-screen max-w-[1800px] mx-auto relative bg-[#141414]
+    <div className="w-full h-screen  mx-auto relative bg-[#141414]
     overflow-x-hidden overflow-y-auto scrollbar-hidden">
         
         <img src="/Image/Consultancy.png" className="w-full h-full m object-cover hidden md:block" 
@@ -54,7 +54,7 @@ function Consultancy() {
         ></div>
 
         {/* consultanCard */}
-        <div className='w-[95%] md:w-[95%] h-auto flex flex-wrap mx-auto mt-10 mb-10 gap-9 py-20'>
+        <div className='w-[95%] md:w-[95%] h-auto flex flex-row justify-center items-center flex-wrap  mx-auto mt-10 mb-10 gap-9 py-20'>
           {
             cards.map((item,idx)=>(
               <Card key={idx} item={item}/>

@@ -144,7 +144,7 @@ function Home() {
 
 
   return (
-    <div className='max-w-screen h-screen lg:max-w-[1800px] bg-eliteBlack overflow-x-hidden overflow-auto scrollbar-hidden m-0 scroll-smooth'>
+    <div className='max-w-screen h-screen  bg-eliteBlack overflow-x-hidden overflow-auto scrollbar-hidden m-0 scroll-smooth'>
 
 
       {/* Hero Section */}

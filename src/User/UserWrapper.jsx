@@ -34,7 +34,7 @@ function UserWrapper() {
   }
 
   return (
-<div className='w-full max-w-[1800px] mx-auto'>
+<div className='w-full  mx-auto'>
   
     <NavBar/>
     <Outlet />

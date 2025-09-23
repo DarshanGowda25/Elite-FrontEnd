@@ -29,7 +29,7 @@ const {data,isFetching}  =  useQuery({
 
 
   return (
-    <div className='max-w-screen h-screen lg:max-w-[1800px] overflow-x-hidden overflow-auto scrollbar-hidden m-0 scroll-smooth'>
+    <div className='max-w-screen h-screen  overflow-x-hidden overflow-auto scrollbar-hidden m-0 scroll-smooth'>
 
 
       {/* Hero Section */}

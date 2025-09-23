@@ -84,11 +84,11 @@ function NavBar() {
     <Menu/>
    </button>
 
-   
+  
     <ul className={`${isHamburger ? 'flex' : 'hidden'}
-    flex flex-col items-center absolute top-20 left-0 w-full text-center z-50 !backdrop-blur-3xl  md:!backdrop-blur-none bg-black/96 md:bg-black/0
+    flex flex-col items-center w-full text-center z-50 !backdrop-blur-3xl  md:!backdrop-blur-none  md:bg-black/0
     md:w-auto md:flex md:flex-row md:justify-center md:items-center md:gap-[4px] md:text-white md:absolute md:uppercase md:font-bold
-    md:top-0 md:space-y-0 md:p-0 md:left-[475px] md:m-0 md:h-[78px]
+   
      
     `} >
        

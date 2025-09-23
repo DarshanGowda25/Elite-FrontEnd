@@ -125,7 +125,7 @@ const handleQuantity = (data) =>{
 
 
   return (
-  <div  className='max-w-screen h-screen lg:max-w-[1800px] overflow-x-hidden overflow-y-auto scrollbar-hidden  scroll-smooth flex flex-col md:flex-row items-center '>
+  <div  className='max-w-screen h-screen  overflow-x-hidden overflow-y-auto scrollbar-hidden  scroll-smooth flex flex-col md:flex-row items-center '>
 
 
     <section className='h-auto md:h-screen  w-[95%] md:w-[65%]  flex flex-col items-center  gap-10 md:overflow-y-auto scrollbar-hidden pb-10'>

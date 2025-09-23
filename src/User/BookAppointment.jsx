@@ -80,7 +80,7 @@ function BookAppointment() {
   };
 
   return (
-    <div className='w-full h-screen max-w-[1800px] mx-auto relative bg-center bg-cover'
+    <div className='w-full h-screen  mx-auto relative bg-center bg-cover'
     style={{backgroundImage:"url('Image/BookAppointment.jpg')"}}
     >
         

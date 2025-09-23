@@ -79,7 +79,7 @@ function FitnessPage({pageDetails}) {
   
   
   return (
-    <div className='max-w-screen h-screen lg:max-w-[1800px] bg-eliteBlack overflow-x-hidden overflow-auto scrollbar-hidden scroll-smooth'>
+    <div className='max-w-screen h-screen  bg-eliteBlack overflow-x-hidden overflow-auto scrollbar-hidden scroll-smooth'>
 
         {/* //details and price */}
         <div className='h-screen w-full bg-cover bg-center pt-[120px]  flex relative' style={{backgroundImage:"url('/Image/BG.jpg')"}}>

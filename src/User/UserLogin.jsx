@@ -57,7 +57,7 @@ function UserLogin() {
 
 
   return (
-    <section className='w-full h-screen max-w-[1800px] mx-auto bg-cover bg-center  z-1 ' style={{ backgroundImage: "url('/Image/login.jpg')" }}>
+    <section className='w-full h-screen  mx-auto bg-cover bg-center  z-1 ' style={{ backgroundImage: "url('/Image/login.jpg')" }}>
       <article className='w-full h-screen flex justify-center items-center ' 
  >
         

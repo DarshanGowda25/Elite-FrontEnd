@@ -40,7 +40,7 @@ function UserSignUp() {
 
 
   return (
-<section className='w-full h-screen max-w-[1800px] mx-auto bg-center bg-cover' style={{ backgroundImage: "url('/Image/login.jpg')" }}>
+<section className='w-full h-screen  mx-auto bg-center bg-cover' style={{ backgroundImage: "url('/Image/login.jpg')" }}>
   <article className='w-full h-full flex justify-center items-center'>
 
   <div className='h-[82%] w-full flex justify-center items-center mt-[80px] overflow-auto '>

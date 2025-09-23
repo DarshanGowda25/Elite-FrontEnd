@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom'
 
 function Store() {
   return (
-    <div className='w-full max-w-[1800px] mx-auto'>
+    <div className='w-full  mx-auto'>
   
     <StoreNavItems/>
    

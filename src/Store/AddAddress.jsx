@@ -83,7 +83,7 @@ function AddAddress() {
   }
 
   return (
-    <div  className={`max-w-screen h-screen lg:max-w-[1800px] overflow-x-hidden overflow-y-auto scrollbar-hidden  scroll-smooth 
+    <div  className={`max-w-screen h-screen  overflow-x-hidden overflow-y-auto scrollbar-hidden  scroll-smooth 
     flex flex-col items-center
     md:flex-row md:items-center relative  ${newAddress ? "w-full bg-black/75 md:bg-black/0":""}`}>
 
