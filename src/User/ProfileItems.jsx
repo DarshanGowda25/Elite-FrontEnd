@@ -20,7 +20,8 @@ import Logout from './Logout';
 
 
 function ProfileItems() {
-
+    const token = localStorage.getItem('token')
+  console.log(token)
 
   // If not logged in, only show login page
   if (!token) {
