@@ -123,12 +123,13 @@ function NavBar() {
        </li>
 
 
-
+        {!localStorage.getItem('token') && (
         <li className={`p-2 rounded-lg hover:bg-eliteGold mt-1
         ${['/', '/signIn', '/signUp', '/fitness', '/fitness/elitePro', '/fitness/elitePlus'].includes(location.pathname) 
         ? "bg-eliteGold" : "bg-transparent "}`} >
             <Link to='/signIn'className='flex gap-2 hover:gap-3 transition-all duration-300 h-full w-full'> <p>Sign In</p> 
             <LogIn className="w-5 h-5 text-white ml-2 mt-0.5"/></Link></li>
+)}
     </ul>
 
     </nav>

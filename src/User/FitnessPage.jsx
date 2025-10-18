@@ -127,8 +127,12 @@ function FitnessPage({pageDetails}) {
 
         {/* //Features */}
         <div className='h-auto w-full bg-[#141414] flex flex-col pt-20 pb-20'>
-          <h1 className='text-3xl text-gray-400 font-semibold uppercase text-center'>Features</h1>
-          <div className='w-[100px] h-[2px] mx-auto bg-eliteGold mt-1'></div>
+        <div className="relative flex flex-col items-center">
+          <h1 className="text-3xl text-eliteGold font-extrabold text-center">
+            Features
+          </h1>
+          <div className="w-20 md:w-25 h-[2px] bg-gradient-to-r from-eliteGold to-white mt-2 rounded-full"></div>
+        </div>
 
           <div className='h-auto w-[70%] flex flex-wrap mx-auto mt-10 gap-4 justify-center uppercase 
           '>

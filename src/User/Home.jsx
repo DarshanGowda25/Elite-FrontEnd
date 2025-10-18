@@ -196,8 +196,13 @@ function Home() {
       {/* memberships cards*/}
       <section id="memberships" className='h-auto w-[full] bg-cover bg-center relative pt-24 pb-24' style={{ backgroundImage: "url('/Image/BG.jpg')" }}>
         <div className="absolute inset-0 bg-black/30 z-1"></div>
-        <h1 className='absolute w-full top-0 text-3xl text-eliteGold font-extrabold mt-24   text-center'>Memberships</h1>
-        <div className='w-[162px] h-[2px] bg-white absolute top-33 left-[670px]'></div>
+        <div className="relative flex flex-col items-center mt-24">
+          <h1 className="text-3xl text-eliteGold font-extrabold text-center">
+            Memberships
+          </h1>
+          <div className="w-24 md:w-40 h-[2px] bg-gradient-to-r from-eliteGold to-white mt-2 rounded-full"></div>
+        </div>
+
         <div className='h-full w-[95%] md:w-[93%] mx-auto flex flex-nowrap justify-start items-center gap-3 overflow-x-auto scrollbar-hidden md:overflow-hidden scroll-smooth relative'>
        
         
@@ -221,8 +226,12 @@ function Home() {
       <section id="review" className='h-auto w-[full] bg-cover bg-center relative pt-25 pb-25' style={{ backgroundImage: "url('/Image/BG.jpg')" }}>
       
         <div className="absolute inset-0 bg-black/30 z-1"></div>
-        <h1 className='absolute top-15 w-full text-center text-3xl text-white font-bold'>Reviews</h1>
-        <div className='absolute top-25 left-[720px] w-[100px] h-[2px] bg-eliteGold '></div>
+        <div className="relative flex flex-col items-center mt-24">
+          <h1 className="text-3xl text-eliteGold font-extrabold text-center">
+            Reviews
+          </h1>
+          <div className="w-24 md:w-30 h-[2px] bg-gradient-to-r from-eliteGold to-white mt-2 rounded-full"></div>
+        </div>
         
 
 
@@ -400,8 +409,12 @@ export function Footer(){
       {/* //section links */}
       <div className={`h-full w-[40%] flex flex-col items-center ml-5 md:ml-0
       ${location.pathname !== '/'?'hidden':'flex'}`}>
-        <h1 className='mt-10 text-xl font-bold text-white'>Our Links</h1>
-        <div className='h-[2px] w-[60px] bg-eliteGold'></div>
+        <div className="relative flex flex-col items-center">
+          <p className="text-xl text-white font-extrabold text-center">
+            Our links
+          </p>
+          <div className="w-15 md:w-20 h-[2px] bg-gradient-to-r from-eliteGold to-white mt-1 rounded-full"></div>
+        </div>
         <ul className='flex flex-col mt-6 text-gray-400 gap-2'>
           <li><a href='#Home' className='hover:text-eliteGold'>Home</a></li>
           <li><a href='#memberships' className='hover:text-eliteGold'>Memberships</a></li>
@@ -415,8 +428,12 @@ export function Footer(){
     {/* Footer Right */}
     <div className='h-[85%] w-[95%] md:w-[45%] flex flex-col md:flex-row'>
       <div className='h-full w-[90%] md:w-[60%] pl-4 flex flex-col'>
-        <h1 className='mt-10 text-xl font-bold text-white'>Contact Us</h1>
-        <div className='h-[2px] w-[60px] bg-eliteGold'></div>
+        <div className="relative flex flex-col items-center">
+          <p className="text-xl text-white font-extrabold text-center">
+            Contacts
+          </p>
+          <div className="w-15 md:w-20 h-[2px] bg-gradient-to-r from-eliteGold to-white mt-1 rounded-full"></div>
+        </div>
 
         {/* //Address */}
         <div className='flex mt-5 items-center text-gray-400'>
@@ -460,8 +477,12 @@ export function Footer(){
 
       {/* social media account */}
       <div className='h-full w-[40%] px-4'>
-        <h1 className='mt-10 text-xl font-bold text-white'>Our Social Media</h1>
-        <div className='h-[2px] w-[130px] bg-eliteGold'></div>
+        <div className="relative flex flex-col items-center ">
+          <p className="text-xl text-white font-extrabold text-center">
+            Our social media
+          </p>
+          <div className="w-20 md:w-25 h-[2px] bg-gradient-to-r from-eliteGold to-white mt-1 rounded-full"></div>
+        </div>
 
         <div className='flex mt-6 gap-6 cursor-pointer'>
           <div className='bg-gray-500 hover:bg-eliteGold p-3 rounded-full place-content-center'>
